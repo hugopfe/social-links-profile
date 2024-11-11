@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'Inter 400';
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter 600';
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Inter 700';
+    src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+    font-weight: 700;
+}
+
+:root {
+    --green: hsl(75, 94%, 57%);
+    --grey-1: hsl(0, 0%, 20%);
+    --grey-2: hsl(0, 0%, 12%);
+    --grey-3: hsl(0, 0%, 8%);
+
+    --paragraph-size: 14px;
+
+    --font-inter-400: 'Inter 400';
+    --font-inter-600: 'Inter 600';
+    --font-inter-700: 'Inter 700';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--grey-3);
+
+    height: 100vh;
+    width: 100vw;
+
+    color: white;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: var(--grey-2);
+
+    border-radius: 10px;
+    min-width: 250px;
+    width: 50%;
+    max-width: 350px;
+    padding: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+}
+
+img {
+    width: 70px;
+    border-radius: 50%;
+
+    margin: 20px 0;
+}
+
+h1 {
+    font-family: var(--font-inter-600);
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.address {
+    color: var(--green);
+    font-family: var(--font-inter-600);
+    font-size: 0.8em;
+    margin: 5px 0;
+}
+
+.desc {
+    font-family: var(--font-inter-400);
+    margin: 20px 0;
+    font-size: 0.8em;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    width: 90%;
+}
+
+ul li {
+    margin: 10px 0;
+
+}
+
+ul a {
+    background-color: var(--grey-1);
+    border-radius: 5px;
+
+    display: block;
+    padding: 10px 0;
+    
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-inter-600);
+    font-size: 0.8em;
+}
+
+ul a:hover, ul a:active{
+    background-color: var(--green);
+    color: black;
+}
+
+a.disabled {
+    background-color: var(--grey-1) !important;
+    color: var(--grey-2) !important;
+    cursor: not-allowed;
+}
